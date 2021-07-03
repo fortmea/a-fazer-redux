@@ -15,7 +15,7 @@ function App() {
           <ListaComponent></ListaComponent>
         </div>
         <p className="mt-5">
-            Data de build: {preval`module.exports = new Date().toLocaleString();`}.
+            Data de build: {preval`module.exports = new Date().toLocaleString();`} (GMT+0).
           </p>
       </div>
       
