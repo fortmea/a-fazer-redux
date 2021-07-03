@@ -9,8 +9,7 @@ export default function listaReducer(state = initial_state, action) {
     switch (action.type) {
         case 'ADD':
             if(action.payload!==""){
-            var key = action.key;
-            localStorage.setItem('state',  JSON.stringify({...state, [key]: action.payload}))
+            localStorage.setItem('state',  JSON.stringify({...state, [UUID.v4()]: action.payload}))
             return { ...state, [UUID.v4()]: action.payload }
         }else{
             return state
