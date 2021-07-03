@@ -1,8 +1,7 @@
-export function add(content, key){
+export function add(content){
     return {
         type: "ADD",
-        payload: content,
-        key: key
+        payload: content
     }
 }
 export function remove(key){

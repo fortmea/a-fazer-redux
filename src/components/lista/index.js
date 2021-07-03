@@ -1,16 +1,17 @@
 import React, { useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import {add, remove} from "../../store/lista/lista.action"
-import {default as UUID} from "uuid";  
+
 function Lista(){
     const [nitem, setNitem] = useState("");
     const dispatch = useDispatch();
     const result = useSelector(state => state.Lista)
+    const seletor_result = useSelector(state => state.Seletor)
     return <>
     <div className="list-group top-margin">
     {Object.keys(result).map((item, i) => (
-        <li className="list-group-item border-info bg-transparent text-light" key={i}>
-            <p className="col"><h4>{ result[item] }</h4></p>
+        <li className={`list-group-item border-info bg-transparent  ${seletor_result['tc']}`} key={i}>
+            <h4 className="col">{ result[item] }</h4>
             <button className="btn btn-outline-danger col"  onClick={
                 ()=>{
                     dispatch(remove(item));
@@ -21,10 +22,10 @@ function Lista(){
     </div>
     <div className="row justify-content-center">
         <div className="top-margin-1h col-10">
-        <input type = "text" placeholder="Texto para o próximo item da lista" className="form-control " value={nitem} onChange={(e) => setNitem(e.target.value)}></input>
+        <input type = "text" placeholder="Texto para o próximo item da lista" className={`${seletor_result['bg']} ${seletor_result['tc']} form-control`} value={nitem} onChange={(e) => setNitem(e.target.value)}></input>
     <button className="btn btn-outline-info mb-3 top-margin-1h col-12" onClick={
                 ()=>{
-                    dispatch(add(nitem, UUID.v4()));
+                    dispatch(add(nitem));
                     setNitem("");
                 }
                 }>
