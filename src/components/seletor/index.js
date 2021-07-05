@@ -7,14 +7,14 @@ function Seletor() {
     const selected_bg = result['dc'];
     var sel_tema;
     var drop_text;
-    if(result["bg"] === "bg-light"){
+    if (result["bg"] === "bg-light") {
         sel_tema = <li><button className="dropdown-item" onClick={
             () => {
                 dispatch(set_tema("bg-dark", "text-light", "dropdown-menu-dark"));
             }
         }>Tema escuro</button></li>;
         drop_text = "Tema claro";
-    }else{
+    } else {
         sel_tema = <li><button className="dropdown-item" onClick={
             () => {
                 dispatch(set_tema("bg-light", "text-dark", "dropdown-menu-light"));
@@ -22,6 +22,7 @@ function Seletor() {
         }>Tema claro</button></li>;
         drop_text = "Tema escuro"
     }
+
     return <>
         <div className="btn-group">
             <button type="button" className="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">

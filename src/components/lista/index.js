@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import {add, remove} from "../../store/lista/lista.action"
+import {add, remove, clean} from "../../store/lista/lista.action"
 
 function Lista(){
     const [nitem, setNitem] = useState("");
@@ -30,6 +30,13 @@ function Lista(){
                 }
                 }>
         <i className="fa fa-plus" aria-hidden="true"></i> Adicionar
+    </button>
+    <button className="btn btn-outline-danger mb-3 mt-1 col-12" onClick={
+                ()=>{
+                    dispatch(clean());
+                }
+                }>
+        Limpar tudo
     </button>
     </div>
     </div>

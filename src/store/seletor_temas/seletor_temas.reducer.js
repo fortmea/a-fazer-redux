@@ -8,12 +8,14 @@ export default function seletorReducer(state = initial_state, action) {
     switch (action.type) {
         case 'SET':
             if (action.payload !== "") {
+                document.body.classList=`${action.bg} ${action.tc}`;
                 localStorage.setItem('tema', JSON.stringify({ bg: action.bg, tc: action.tc, dc: action.dc }))
                 return { bg: action.bg, tc: action.tc, dc: action.dc }
             } else {
                 return state
             }
         default:
+            document.body.classList=`${state.bg} ${state.tc}`;
             return state
     }
 }

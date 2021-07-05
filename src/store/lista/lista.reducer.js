@@ -19,6 +19,11 @@ export default function listaReducer(state = initial_state, action) {
             delete clone[action.payload];
             localStorage.setItem('state', JSON.stringify(clone))
             return clone
+        case 'CLEAN':
+            localStorage.removeItem('state');
+            var clean = { 0: "Comece a adicionar itens na lista!" };
+            state = {};
+            return clean
         default:
             return state
     }
