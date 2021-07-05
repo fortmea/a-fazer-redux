@@ -5,7 +5,7 @@ import preval from 'preval.macro'
 function App() {
   const result = useSelector(state => state.Seletor)
   return (
-    <div className={`${result['tc']} ${result['bg']}`} style={{width:"100%"}} >
+    <div className={`${result['tc']} ${result['bg']}`} style={{height:"100%", width:"100%"}} >
       <div className="container">
         <div className="mt-5" >
           <h3>
