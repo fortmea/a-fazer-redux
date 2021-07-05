@@ -8,7 +8,7 @@ function App() {
     <div className={`${result['tc']} ${result['bg']}`} style={{width:"100%"}} >
       <div className="container">
         <div className="mt-5" >
-          <h3 >
+          <h3>
             Lista de coisas à fazer
           </h3>
           <Seletor></Seletor>

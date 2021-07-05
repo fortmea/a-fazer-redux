@@ -22,7 +22,7 @@ function Lista(){
     </div>
     <div className="row justify-content-center">
         <div className="top-margin-1h col-10">
-        <input type = "text" placeholder="Texto para o próximo item da lista" className={`${seletor_result['bg']} ${seletor_result['tc']} form-control`} value={nitem} onChange={(e) => setNitem(e.target.value)}></input>
+        <input type = "text" placeholder="Descrição para a atividade" className={`${seletor_result['bg']} ${seletor_result['tc']} form-control border-info`} value={nitem} onChange={(e) => setNitem(e.target.value)}></input>
     <button className="btn btn-outline-info mb-3 top-margin-1h col-12" onClick={
                 ()=>{
                     dispatch(add(nitem));
