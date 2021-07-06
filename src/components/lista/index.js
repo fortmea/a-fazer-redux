@@ -10,7 +10,7 @@ function Lista(){
     return <>
     <div className="list-group top-margin">
     {Object.keys(result).map((item, i) => (
-        <li className={`list-group-item border-info bg-transparent  ${seletor_result['tc']}`} key={i}>
+        <li className={`list-group-item ${seletor_result['oc']} bg-transparent  ${seletor_result['tc']}`} key={i}>
             <h4 className="col"><small className="fs-6 form-label">nº {i+1}<br/></small> <span>{ result[item] }</span></h4>
             <button className="btn btn-outline-danger col"  onClick={
                 ()=>{
@@ -22,8 +22,8 @@ function Lista(){
     </div>
     <div className="row justify-content-center">
         <div className="top-margin-1h col-10">
-        <input type = "text" placeholder="Descrição para a atividade" className={`${seletor_result['bg']} ${seletor_result['tc']} form-control border-info`} value={nitem} onChange={(e) => setNitem(e.target.value)}></input>
-    <button className="btn btn-outline-info mb-3 top-margin-1h col-12" onClick={
+        <input type = "text" placeholder="Descrição para a atividade" className={`${seletor_result['bg']} ${seletor_result['tc']} form-control ${seletor_result['oc']}`} value={nitem} onChange={(e) => setNitem(e.target.value)}></input>
+    <button className={`btn ${seletor_result['bc']} mb-3 top-margin-1h col-12`} onClick={
                 ()=>{
                     dispatch(add(nitem));
                     setNitem("");
@@ -31,7 +31,7 @@ function Lista(){
                 }>
         <i className="fa fa-plus" aria-hidden="true"></i> Adicionar
     </button>
-    <button className="btn btn-outline-danger mb-3 mt-1 col-12" onClick={
+    <button className={`btn ${seletor_result['bc']} mb-3 mt-1 col-12`} onClick={
                 ()=>{
                     dispatch(clean());
                 }

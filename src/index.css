@@ -2,10 +2,10 @@ html, body {
   height: fit-content
 }
 #root{
-  margin-bottom: 0;
+ width: 100%;
+ height: 100%;
 }
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -22,4 +22,12 @@ code {
 }
 .left-margin{
   margin-left: 2em;
+}
+.bg-pink{
+  background-color: #F8BBD0;
+}
+.dropdown-menu-pink{
+  color: #dee2e6;
+  background-color: #F8BBD0;
+  border-color: rgba(131, 80, 131, 0.15);
 }

@@ -6,7 +6,7 @@ function App() {
   const result = useSelector(state => state.Seletor)
   return (
     <div className={`${result['tc']} ${result['bg']}`} style={{height:"100%", width:"100%"}} >
-      <div className="container">
+      <div >
         <div className="mt-5" >
           <h3>
             Lista de coisas à fazer
@@ -16,6 +16,7 @@ function App() {
         </div>
         <p className="mt-5">
             Data de build: {preval`module.exports = new Date().toLocaleString();`} (GMT+0).
+            <br/><a href="https://github.com/fortmea/a-fazer-redux" className="text-decoration-none" target="_blank" rel="noreferrer"><i className="fa fa-github" aria-hidden="true"></i> Github</a>
           </p>
       </div>
       
