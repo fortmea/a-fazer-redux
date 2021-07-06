@@ -11,7 +11,7 @@ function Lista(){
     <div className="list-group top-margin">
     {Object.keys(result).map((item, i) => (
         <li className={`list-group-item border-info bg-transparent  ${seletor_result['tc']}`} key={i}>
-            <h4 className="col">{ result[item] }</h4>
+            <h4 className="col"><small className="fs-6 form-label">nº {i+1}<br/></small> <span>{ result[item] }</span></h4>
             <button className="btn btn-outline-danger col"  onClick={
                 ()=>{
                     dispatch(remove(item));
@@ -36,7 +36,7 @@ function Lista(){
                     dispatch(clean());
                 }
                 }>
-        Limpar tudo
+        Limpar tudo / Resetar
     </button>
     </div>
     </div>
