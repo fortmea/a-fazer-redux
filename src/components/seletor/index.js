@@ -13,7 +13,7 @@ function Seletor() {
             </button>
             <ul className={`dropdown-menu ${selected_bg}`}>
                 {Object.keys(temas).map((item, i) => (
-                    <li key={i}><button className="dropdown-item" onClick={
+                    <li key={i}><button className={`dropdown-item ${result['tc']}`} onClick={
                         () => {
                             dispatch(set_tema(`${temas[item].bg}`, `${temas[item].tc}`, `${temas[item].dc}`, `${temas[item].bc}`, `${temas[item].oc}`));
                         }
