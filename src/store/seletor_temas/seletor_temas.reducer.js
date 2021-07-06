@@ -2,7 +2,7 @@ var initial_state;
 if (localStorage.getItem('tema')) {
     initial_state = JSON.parse(localStorage.getItem('tema'));
 } else {
-    initial_state = { bg: "bg-dark", tc: "text-light", dc:"dropdown-menu-light", bc:"btn-outline-info", oc: "border-info" }
+    initial_state = { bg: "bg-dark", tc: "text-light", dc:"dropdown-menu-dark", bc:"btn-outline-info", oc: "border-info" }
 }
 export default function seletorReducer(state = initial_state, action) {
     switch (action.type) {

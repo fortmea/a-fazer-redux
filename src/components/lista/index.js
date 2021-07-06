@@ -31,7 +31,7 @@ function Lista(){
                 }>
         <i className="fa fa-plus" aria-hidden="true"></i> Adicionar
     </button>
-    <button className={`btn ${seletor_result['bc']} mb-3 mt-1 col-12`} onClick={
+    <button className={`btn btn-outline-danger mb-3 mt-1 col-12`} onClick={
                 ()=>{
                     dispatch(clean());
                 }
