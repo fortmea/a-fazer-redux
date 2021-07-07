@@ -1,13 +1,5 @@
 {
     "temas": {
-        "rosa": {
-            "nome": "Rosa",
-            "bg": "bg-pink",
-            "tc": "text-light",
-            "dc": "dropdown-menu-pink",
-            "bc": "btn-outline-light",
-            "oc": "border-light"
-        },
         "escuro": {
             "nome": "Escuro",
             "bg": "bg-dark",
@@ -23,6 +15,14 @@
             "dc": "dropdown-menu-light",
             "bc": "btn-outline-info",
             "oc": "border-info"
+        },
+        "rosa": {
+            "nome": "Rosa",
+            "bg": "bg-pink",
+            "tc": "text-light",
+            "dc": "dropdown-menu-pink",
+            "bc": "btn-outline-light",
+            "oc": "border-light"
         }
     }
 }

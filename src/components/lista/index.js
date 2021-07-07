@@ -10,7 +10,7 @@ function Lista(){
     return <>
     <div className="list-group top-margin">
     {Object.keys(result).map((item, i) => (
-        <li className={`list-group-item ${seletor_result['oc']} bg-transparent  ${seletor_result['tc']}`} key={i}>
+        <li className={`list-group-item  ${seletor_result['oc']} bg-transparent  ${seletor_result['tc']}`} key={i}>
             <h4 className="col"><small className="fs-6 form-label">nº {i+1}<br/></small> <span>{ result[item] }</span></h4>
             <button className="btn btn-outline-danger col"  onClick={
                 ()=>{
