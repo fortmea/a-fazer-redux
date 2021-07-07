@@ -19,7 +19,9 @@ export default class LatestCommitComponent extends React.Component {
         )
             .then(response => {
                 response.json().then(json => {
+                    console.log(json)
                     this.setState({
+                        message: json.commit.commit.message,
                         author: json.commit.author.login,
                         branch: json.name,
                         date: json.commit.commit.author.date,
@@ -37,10 +39,11 @@ export default class LatestCommitComponent extends React.Component {
         return (
             <div className="mt-5">
                 <h5>Dados do último commit:</h5>
-                <i class="fa fa-male" aria-hidden="true"></i> Autor: {this.state.author}<br/>
-                <i class="fa fa-tree" aria-hidden="true"></i> Branch: {this.state.branch}<br/>
-                <i class="fa fa-calendar" aria-hidden="true"></i> Data: {this.state.date}<br/>
-                <i class="fa fa-check" aria-hidden="true"></i> SHA: {this.state.sha}
+                <i className="fa fa-file-text" aria-hidden="true"></i> Mensagem: {this.state.message}<br/>
+                <i className="fa fa-male" aria-hidden="true"></i> Autor: {this.state.author}<br/>
+                <i className="fa fa-tree" aria-hidden="true"></i> Branch: {this.state.branch}<br/>
+                <i className="fa fa-calendar" aria-hidden="true"></i> Data: {this.state.date}<br/>
+                <i className="fa fa-check" aria-hidden="true"></i> SHA: {this.state.sha}
             </div>
         );
     }
