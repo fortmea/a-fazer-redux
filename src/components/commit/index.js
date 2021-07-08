@@ -19,7 +19,6 @@ export default class LatestCommitComponent extends React.Component {
         )
             .then(response => {
                 response.json().then(json => {
-                    console.log(json)
                     this.setState({
                         message: json.commit.commit.message,
                         author: json.commit.author.login,
@@ -30,9 +29,6 @@ export default class LatestCommitComponent extends React.Component {
                     });
                 });
             })
-            .catch(error => {
-                console.log(error);
-            });
     }
 
     render() {
