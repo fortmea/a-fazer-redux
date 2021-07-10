@@ -1,9 +1,11 @@
-import {createStore, combineReducers} from 'redux'
+import {configureStore} from '@reduxjs/toolkit'
+import CommitReducer from './commit/commit.reducer'
 import listaReducer from './lista/lista.reducer'
 import seletorReducer from './seletor_temas/seletor_temas.reducer'
-const rootReducer = combineReducers({
-    Lista: listaReducer,
-    Seletor: seletorReducer
+export default configureStore({
+    reducer:{
+        Lista: listaReducer,
+        Seletor: seletorReducer,
+        Commit: CommitReducer
+    }
 })
-const store = createStore(rootReducer)
-export default store
