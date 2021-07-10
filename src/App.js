@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import ListaComponent from './components/lista';
 import Seletor from './components/seletor';
 import CommitInfo from './components/commit'
@@ -8,7 +8,7 @@ import { getCommitInfo } from "../src/store/fetchActions"
 function App() {
   const result = useSelector(state => state.Seletor)
   const dispatch = useDispatch();
-  useEffect(() => { dispatch(getCommitInfo()) }, [])
+  useEffect(() => { dispatch(getCommitInfo()) }, [dispatch])
   return (
     <div className={`${result['tc']} ${result['bg']}`} style={{ height: "100%", width: "100%" }} >
       <div >
